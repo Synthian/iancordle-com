@@ -1,3 +1,0 @@
-# iancordle.com
-
-*Coming soon!*
