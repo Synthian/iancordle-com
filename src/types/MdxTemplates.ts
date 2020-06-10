@@ -1,9 +1,16 @@
 import React from 'react';
 
-interface FrontMatterBase {
+export interface FrontMatterBase {
   title: string;
 }
 
-type FrontMatter = FrontMatterBase;
+export interface SynthBlogFrontMatter extends FrontMatterBase {
+  date: string;
+  author: string;
+  blurb: string;
+  __resourcePath: string;
+}
+
+export type FrontMatter = FrontMatterBase | SynthBlogFrontMatter;
 
 export type MdxTemplate = (frontMatter: FrontMatter) => React.FC;
