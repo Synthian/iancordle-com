@@ -18,8 +18,11 @@ parserOptions:
   sourceType: module # Allows for the use of imports
 ignorePatterns:
   - "**/node_modules/"
-  - "**/build/"
   - "next.config.js"
+  - "**/.mdx-data"
+  - "**/.next"
+  - "**/out"
+  - "**/public"
 settings:
   react:
     version: detect

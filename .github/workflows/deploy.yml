@@ -16,5 +16,6 @@ jobs:
       with:
         ssh-private-key: ${{ secrets.SSH_KEY }}
     - run: npm i
-    - run: npm run deploy
+    - run: npm run build
+    - run: gh-pages -d out -t true -u "GitHub Actions <github-action@users.noreply.github.com>"
       

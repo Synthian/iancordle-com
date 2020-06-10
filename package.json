@@ -5,10 +5,10 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "rimraf out && next build && next export",
     "start": "next start",
     "lint": "eslint . --ext ts --ext tsx --ext js",
-    "deploy": "rimraf out && next build && next export && gh-pages -d out -t true"
+    "deploy": "gh-pages -d out -t true"
   },
   "dependencies": {
     "@chakra-ui/core": "^0.8.0",
