@@ -1,14 +1,14 @@
 import React from 'react';
 import BasePage, { BasePageProps } from './BasePage';
 import PortfolioHeader from './PortfolioHeader';
-import { Flex, Box, Divider } from '@chakra-ui/core';
-import { SIZES } from '../styles/theme';
+import { Flex, Box } from '@chakra-ui/core';
+import { PALETTE, SIZES } from '../styles/theme';
 import PortfolioFooter from './PortfolioFooter';
 
 const PortfolioPage: React.FC<BasePageProps> = (props) => {
   return (
-    <BasePage title={`IC${props.title ? ' | ' : ''}${props.title}`}>
-      <PortfolioHeader maxW={SIZES.pageMaxWidth} px={SIZES.pagePadding} />
+    <BasePage title={`IC${props.title ? ' | ' : ''}${props.title}`} bg={PALETTE.bg}>
+      <PortfolioHeader maxW={SIZES.pageMaxWidth} px={SIZES.pagePadding} bg={PALETTE.bg} />
       <Flex direction={'column'} alignItems={'center'} maxW={SIZES.pageMaxWidth} m={'auto'} px={SIZES.pagePadding}>
         <Box w={'100%'}>{props.children}</Box>
         <PortfolioFooter />

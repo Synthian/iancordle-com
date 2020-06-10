@@ -38,6 +38,7 @@ const theme: DefaultTheme = {
 export const PALETTE = {
   primary: theme.colors.orange['300'],
   bg: theme.colors.gray['900'],
+  altBg: '#241616',
   text: theme.colors.gray['50'],
   secondaryText: theme.colors.gray['300'],
   link: theme.colors.pink['300']

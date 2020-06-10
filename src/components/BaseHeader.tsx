@@ -5,6 +5,7 @@ import { PALETTE } from '../styles/theme';
 export interface BaseHeaderProps {
   maxW: string;
   px: number;
+  bg: string;
 }
 
 const BaseHeader: React.FC<BaseHeaderProps> = (props) => {
@@ -13,7 +14,7 @@ const BaseHeader: React.FC<BaseHeaderProps> = (props) => {
   return (
     <Flex
       position={'sticky'}
-      bg={PALETTE.bg}
+      bg={props.bg}
       zIndex={theme.zIndices.sticky}
       top={0}
       maxW={props.maxW}

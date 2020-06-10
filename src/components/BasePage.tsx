@@ -5,6 +5,7 @@ import { PALETTE } from '../styles/theme';
 
 export interface BasePageProps {
   title: string;
+  bg: string;
 }
 
 const BasePage: React.FC<BasePageProps> = (props) => {
@@ -13,7 +14,7 @@ const BasePage: React.FC<BasePageProps> = (props) => {
       <Head>
         <title>{props.title}</title>
       </Head>
-      <Box w={'100%'} h={'100%'} bg={PALETTE.bg} color={PALETTE.text} overflow={'auto'}>
+      <Box w={'100%'} h={'100%'} bg={props.bg} color={PALETTE.text} overflow={'auto'}>
         {props.children}
       </Box>
     </>
