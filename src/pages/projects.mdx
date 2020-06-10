@@ -1,6 +1,29 @@
 ---
 title: Projects
 ---
+import ProjectHeader from '../components/ProjectHeader';
 
-# Projects
-Here's also what I've done with my life
+# Personal Projects
+
+<ProjectHeader title={'iancordle.com'} subtitle={'[Typescript, React, Next.js]'} fontSize={40} githubLink={'https://github.com/Synthian/iancordle-com'} projectLink={'https://iancordle.com'} />
+
+This website is a React application built with Next.js. All of my static content is written in Markdown files with MDX.
+I'm also using Chakra as my UI Library of choice.
+Everything is deployed via GitHub Pages.
+
+I will admit I heavily based this site off of [leerob.io](https://leerob.io). His project was a great help in putting this together.
+
+***
+
+<ProjectHeader title={'Bastion Auto Splitter'} subtitle={'[C#]'} fontSize={40} githubLink={'https://github.com/Synthian/LiveSplit.Bastion'}/>
+
+Video game speedrunners want to know when they've reached a certain point in the game so they can compare their splits
+against previous runs. With the help of DevilSquirrel, we built this LiveSplit plugin for Bastion players to automatically
+time when they have completed each level.
+
+***
+
+<ProjectHeader title={'BastionBot'} subtitle={'[Java, Spring]'} fontSize={40} githubLink={'https://github.com/Synthian/BastionBot'}/>
+
+BastionBot is a Discord bot that automatically tells the Bastion Speedrun Community when players have gone live on Twitch
+and when new speedruns have been verified on Speedrun.com. It is currently being rewritten to use the Spring Framework.
