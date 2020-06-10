@@ -1,0 +1,1 @@
+self.__BUILD_MANIFEST = (function(a){return {"/":[a],"/404":[a],"/index":[a],"/markdown-reference":[a],"/synth":[a]}}("static\u002Fchunks\u002F986f99a1e6362a9fadbab30862c42b6c0cbf62c7.d75bc904ae3773188c41.js"));self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()
