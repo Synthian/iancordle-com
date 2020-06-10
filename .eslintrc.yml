@@ -20,3 +20,6 @@ ignorePatterns:
   - "**/node_modules/"
   - "**/build/"
   - "next.config.js"
+settings:
+  react:
+    version: detect

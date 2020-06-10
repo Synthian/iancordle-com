@@ -1,11 +1,11 @@
 import React from 'react';
-import BasePage, { BasePageProps } from './BasePage';
-import { Flex, Box, Divider } from '@chakra-ui/core';
+import BasePage, { SubPageProps } from './BasePage';
+import { Flex, Box } from '@chakra-ui/core';
 import { PALETTE, SIZES } from '../styles/theme';
 import SynthHeader from './SynthHeader';
 import SynthFooter from './SynthFooter';
 
-const SynthPage: React.FC<BasePageProps> = (props) => {
+const SynthPage: React.FC<SubPageProps> = (props) => {
   return (
     <BasePage title={`Synth${props.title ? ' | ' : ''}${props.title}`} bg={PALETTE.altBg}>
       <SynthHeader maxW={SIZES.pageMaxWidth} px={SIZES.pagePadding} bg={PALETTE.altBg} />

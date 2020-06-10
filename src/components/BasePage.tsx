@@ -3,9 +3,12 @@ import Head from 'next/head';
 import { Box } from '@chakra-ui/core';
 import { PALETTE } from '../styles/theme';
 
-export interface BasePageProps {
-  title: string;
+export interface BasePageProps extends SubPageProps {
   bg: string;
+}
+
+export interface SubPageProps {
+  title: string;
 }
 
 const BasePage: React.FC<BasePageProps> = (props) => {
