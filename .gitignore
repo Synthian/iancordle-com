@@ -1,0 +1,19 @@
+# dependencies
+node_modules
+
+# next.js
+.next
+out
+_next
+.env*.local
+
+# mdx
+.mdx-data
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# misc
+.DS_Store
