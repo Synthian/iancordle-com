@@ -8,8 +8,7 @@
     "build": "rimraf out && next build && next export",
     "start": "next start",
     "lint": "eslint . --ext ts --ext tsx --ext js",
-    "deploy": "gh-pages -d out -t true",
-    "pages-deploy": "gh-pages -d out -t true -u 'GitHub Actions <github-action@users.noreply.github.com>'"
+    "deploy": "gh-pages -d out -t true"
   },
   "dependencies": {
     "@chakra-ui/core": "^0.8.0",

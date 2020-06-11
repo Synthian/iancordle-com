@@ -17,4 +17,8 @@ jobs:
         ssh-private-key: ${{ secrets.SSH_KEY }}
     - run: npm i
     - run: npm run build
-    - run: npm run pages-deploy
+    - uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        SSH: true
+        BRANCH: gh-pages
+        FOLDER: out
