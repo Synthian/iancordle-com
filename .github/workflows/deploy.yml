@@ -22,3 +22,5 @@ jobs:
         SSH: true
         BRANCH: gh-pages
         FOLDER: out
+        CLEAN: true
+        GIT_CONFIG_NAME: GitHub Actions
