@@ -18,7 +18,7 @@ const SynthBlogTemplate: MdxTemplate = (frontMatter) => {
         </Heading>
         <Flex alignItems={'center'} w={'100%'} mb={12}>
           <Text color={PALETTE.secondaryText} as={'i'} flex={1}>
-            by Ian Cordle
+            by {fm.author}
           </Text>
           <Text color={PALETTE.secondaryText} as={'i'}>
             {dateString}

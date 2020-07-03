@@ -20,7 +20,7 @@ const SynthBlogPosts: React.FC = () => {
   const blogPosts = (frontMatter as SynthBlogFrontMatter[]).sort((afm, bfm) => {
     const a = new Date(afm.date);
     const b = new Date(bfm.date);
-    return a < b ? -1 : 1;
+    return a > b ? -1 : 1;
   });
 
   return (
