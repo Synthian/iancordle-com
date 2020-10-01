@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 export interface FrontMatterBase {
   title: string;
@@ -13,4 +13,9 @@ export interface SynthBlogFrontMatter extends FrontMatterBase {
 
 export type FrontMatter = FrontMatterBase | SynthBlogFrontMatter;
 
-export type MdxTemplate = (frontMatter: FrontMatter) => React.FC;
+interface MdxTemplateProps {
+  children?: ReactNode;
+  frontMatter: FrontMatter;
+}
+
+export type MdxTemplate = (props: MdxTemplateProps) => React.ReactNode;

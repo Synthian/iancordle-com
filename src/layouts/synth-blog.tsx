@@ -5,12 +5,12 @@ import { Heading, Flex, Text } from '@chakra-ui/core';
 import { PALETTE } from '../styles/theme';
 import { stringFromDate } from '../components/synth/SynthBlogPosts';
 
-const SynthBlogTemplate: MdxTemplate = (frontMatter) => {
+const SynthBlogTemplate: MdxTemplate = ({ frontMatter, children }) => {
   const fm = frontMatter as SynthBlogFrontMatter;
   const date = new Date(fm.date);
   const dateString = stringFromDate(date);
 
-  return ({ children }) => (
+  return (
     <>
       <SynthPage title={fm.title}>
         <Heading as={'h1'} fontSize={'5xl'} mt={5} mb={1}>

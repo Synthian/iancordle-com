@@ -8,8 +8,8 @@ import Link from 'next/link';
 import { PALETTE } from '../../styles/theme';
 
 function getLinkFromResourcePath(resourcePath: string) {
-  resourcePath = resourcePath.replace(/\\/g, '/');
-  return resourcePath.substring(resourcePath.indexOf('/pages') + 6, resourcePath.indexOf('.mdx'));
+  resourcePath = resourcePath.replace(/\\/g, '/').replace(/\.mdx$/, '');
+  return resourcePath;
 }
 
 export function stringFromDate(date: Date) {
