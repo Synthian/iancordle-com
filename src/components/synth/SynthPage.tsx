@@ -1,7 +1,7 @@
 import React from 'react';
-import BasePage, { SubPageProps } from './BasePage';
+import BasePage, { SubPageProps } from '../BasePage';
 import { Flex, Box } from '@chakra-ui/core';
-import { PALETTE, SIZES } from '../styles/theme';
+import { PALETTE, SIZES } from '../../styles/theme';
 import SynthHeader from './SynthHeader';
 import SynthFooter from './SynthFooter';
 

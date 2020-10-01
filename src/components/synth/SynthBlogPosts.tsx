@@ -2,10 +2,10 @@ import React from 'react';
 import { Flex, Heading, Text, Box } from '@chakra-ui/core';
 
 // noinspection ES6PreferShortImport
-import { frontMatter } from '../pages/synth/blog/**/*.mdx';
-import { SynthBlogFrontMatter } from '../types/MdxTemplates';
+import { frontMatter } from '../../pages/synth/blog/**/*.mdx';
+import { SynthBlogFrontMatter } from '../../types/MdxTemplates';
 import Link from 'next/link';
-import { PALETTE } from '../styles/theme';
+import { PALETTE } from '../../styles/theme';
 
 function getLinkFromResourcePath(resourcePath: string) {
   resourcePath = resourcePath.replace(/\\/g, '/');

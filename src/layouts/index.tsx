@@ -1,6 +1,6 @@
 import React from 'react';
 import { MdxTemplate } from '../types/MdxTemplates';
-import PortfolioPage from '../components/PortfolioPage';
+import PortfolioPage from '../components/portfolio/PortfolioPage';
 
 const PortfolioTemplate: MdxTemplate = (frontMatter) => {
   return ({ children }) => (

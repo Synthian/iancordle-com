@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Button, Image } from '@chakra-ui/core';
 import Link from 'next/link';
-import BaseHeader, { BaseHeaderProps } from './BaseHeader';
+import BaseHeader, { BaseHeaderProps } from '../BaseHeader';
 
 const SynthHeader: React.FC<BaseHeaderProps> = (props) => {
   return (
