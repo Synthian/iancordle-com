@@ -15,7 +15,7 @@ jobs:
     - uses: webfactory/ssh-agent@v0.4.1
       with:
         ssh-private-key: ${{ secrets.SSH_KEY }}
-    - run: npm i
+    - run: npm ci
     - run: npm run build
     - uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
