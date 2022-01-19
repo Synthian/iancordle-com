@@ -1,0 +1,86 @@
+---
+title: Generating Tyler1 Stream Titles with AI
+layout: synth-blog
+date: 2022-01-18
+author: Synth
+blurb: Tyler's titles already sound ridiculous, I figured an AI would do just as well...
+---
+### The Plan
+Tyler1 may have a huge following on Twitch - but it certainly doesn't come from the eloquence of his stream titles.
+His titles are typically an incoherent mess of capital letters and punctuation. *Not much different from how he
+types to his teammates in game, I suppose...* One day I realized that it wouldn't be very difficult at all for a mediocre
+AI to spit out reasonably convincing stream titles.
+
+So, I put together a list of 1000+ of Tyler's historical stream titles, setup some Python script using textgenrnn, and started
+teaching my computer how to type like a very angry League of Legends player.
+
+<center>
+
+![Tyler1](/img/tyler1.jpg)
+
+</center>
+
+### Training
+
+I didn't have to write any code, really. This is a task that has been tackled hundreds of times by other developers, and the
+textgenrnn library (along with TensorFlow) did all the hard work for me. I didn't even really have to write code to setup the
+training - there was an example all ready to go that accomplished exactly what I needed. All I had to do was plug in my
+list of Tyler's titles and send my neural network on its way.
+
+***
+
+Initially, the network was completely confused. Which makes sense - Tyler's titles confuse most humans, let alone a hastily
+constructed title-bot. Here are a few titles that it came up with after 5 passes:
+
+> #### MAME ! WATH ! ING ! ALLLE ! WAT ! WALLLE ! WALLLE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+> #### T1 GO ! SE MAST DAVE SIC ALLE ! ! UNS THAT ! AWHA DAS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+> #### ANMAN COND AND AALL TINS ! ING ! LUST ! ULCHE !!!
+
+LUST ! ULCHE !!! Although the words make absolutely no sense, the model has already clearly grasped the pattern with spaces
+and exclamation marks in between pretty much every word in T1's titles.
+
+***
+
+Perhaps now is a good time to mention **temperature.** The model allows you to ask for different temperatures of results:
+the higher the temperature, the more "creative" the result. After 10 passes through my data, a low temperature result looked like this:
+
+> #### T1 DOOM ! HE GO ! HE BE GO ! TOME !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+while a high temperature result looked more like this:
+
+> #### BICH E STRAME !!!! BUS MAN ALLEDED . T1 UNSFIAN DOVER BENERFERABLE
+
+***
+
+After 20 training sessions, which was the the default training duration from the example, I started getting some seriously crazy title
+suggestions. One that particularly impressed me:
+
+> #### T1 BAT MAN WOW ! ALWAY ! HE GO !!!!!
+
+I looked through my sample data: "bat" only showed up 3 times and it was only in the word "battle" - this was a *completely* original
+title and I would have believed that Tyler wrote this if I didn't know better. The number of exclamation marks was more reasonable than
+my earlier results, it split "BATMAN" apart into two separate words for no discernible reason, and it misspelled "always." It's perfect!
+
+I'm pretty sure that an AI could be writing T1's titles right now and we would never notice.
+
+### Extra Content
+
+I generated 1000 titles with my new model. You can see all 1000 of those titles [here](/t1_titles.txt) but I've taken out a few of my favorites:
+
+> #### GREAT SPEED ATHLESTIC LEAGES ! NO IS HE ! WOOT ! STRONG ! !!!!!!!!!!!!!!!
+
+> #### T1 BIG GENES ALWAY STOMP ! ALL THE WINGER !!!
+
+> #### AHHHHHAHHAHHAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
+
+> #### BIGT ! NOT ! STOP ! GOES ! HE GO !
+
+> #### T1 ALL ! ME STRONG ! IT STOP ! hee . NO !!
+
+> #### ! T1 !! STRONG ! THIS ? NO BIG THIS MAN !!!!!!
+
+> #### IS LAY OF THE WINES ! HOW HAHAHA ALL THE GAY !!!!
+
+> #### CAN COPS AGAIN DO BIG ! THAT ! SOP ! HE GOOO !!!!!!!!!!
