@@ -17,9 +17,9 @@ const SynthHeader: React.FC<BaseHeaderProps> = (props) => {
           Blog
         </Button>
       </Link>
-      <Link href={'/synth/bastion'} passHref>
+      <Link href={'/synth/raids'} passHref>
         <Button as={'a'} variant={'ghost'}>
-          Bastion
+          FFXIV
         </Button>
       </Link>
     </BaseHeader>
