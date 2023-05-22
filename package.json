@@ -9,8 +9,8 @@
   },
   "scripts": {
     "dev": "cross-env NODE_OPTIONS=--openssl-legacy-provider next dev",
-    "build": "rimraf out && next build && next export",
-    "start": "next start",
+    "build": "rimraf out && cross-env NODE_OPTIONS=--openssl-legacy-provider next build && cross-env NODE_OPTIONS=--openssl-legacy-provider next export",
+    "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider next start",
     "lint": "eslint . --ext ts --ext tsx --ext js",
     "deploy": "gh-pages -d out -t true"
   },
