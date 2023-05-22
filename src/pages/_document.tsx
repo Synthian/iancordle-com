@@ -8,7 +8,7 @@ class MyDocument extends Document {
         <Head>
           <link
             rel='stylesheet'
-            href='https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap'
+            href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap'
           />
           <link rel='icon' type='image/png' href='/ic-icon-16.png' sizes='16x16' />
           <link rel='icon' type='image/png' href='/ic-icon-32.png' sizes='32x32' />

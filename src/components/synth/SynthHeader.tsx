@@ -17,11 +17,6 @@ const SynthHeader: React.FC<BaseHeaderProps> = (props) => {
           Blog
         </Button>
       </Link>
-      <Link href={'/synth/raids'} passHref>
-        <Button as={'a'} variant={'ghost'}>
-          FFXIV
-        </Button>
-      </Link>
     </BaseHeader>
   );
 };

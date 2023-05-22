@@ -8,7 +8,7 @@
     "url": "https://github.com/Synthian/iancordle-com"
   },
   "scripts": {
-    "dev": "next dev",
+    "dev": "cross-env NODE_OPTIONS=--openssl-legacy-provider next dev",
     "build": "rimraf out && next build && next export",
     "start": "next start",
     "lint": "eslint . --ext ts --ext tsx --ext js",
@@ -41,6 +41,7 @@
     "@types/xml2js": "^0.4.5",
     "@typescript-eslint/eslint-plugin": "^2.25.0",
     "@typescript-eslint/parser": "^2.25.0",
+    "cross-env": "^7.0.3",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-mdx": "^1.7.0",

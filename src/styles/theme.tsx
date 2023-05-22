@@ -2,7 +2,7 @@ import React from 'react';
 import { DefaultTheme, theme as defaultTheme } from '@chakra-ui/core';
 import { mdiGithub, mdiLinkedin, mdiTrophyVariant, mdiTwitch, mdiYoutube } from '@mdi/js';
 
-const fontFamily = `'IBM Plex Sans Condensed', 'Helvetica Neue', Arial, sans-serif`;
+const fontFamily = `'Poppins', 'Helvetica Neue', Arial, sans-serif`;
 
 const customIcons: any = {
   github: {
@@ -45,7 +45,7 @@ export const PALETTE = {
 };
 
 export const SIZES = {
-  pageMaxWidth: '3xl',
+  pageMaxWidth: '4xl',
   pagePadding: 4
 };
 
