@@ -3,7 +3,7 @@ import { Box, Button, Image } from '@chakra-ui/core';
 import Link from 'next/link';
 import BaseHeader, { BaseHeaderProps } from '../BaseHeader';
 
-const SynthHeader: React.FC<BaseHeaderProps> = (props) => {
+const PersonalHeader: React.FC<BaseHeaderProps> = (props) => {
   return (
     <BaseHeader {...props}>
       <Link href={'/'} passHref>
@@ -12,13 +12,18 @@ const SynthHeader: React.FC<BaseHeaderProps> = (props) => {
         </a>
       </Link>
       <Box flex={1} />
-      <Link href={'/synth'} passHref>
+      <Link href={'/personal/blog'} passHref>
         <Button as={'a'} variant={'ghost'}>
           Blog
+        </Button>
+      </Link>
+      <Link href={'/personal/crosswords'} passHref>
+        <Button as={'a'} variant={'ghost'}>
+          Crosswords
         </Button>
       </Link>
     </BaseHeader>
   );
 };
 
-export default SynthHeader;
+export default PersonalHeader;

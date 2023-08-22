@@ -4,14 +4,14 @@ export interface FrontMatterBase {
   title: string;
 }
 
-export interface SynthBlogFrontMatter extends FrontMatterBase {
+export interface PersonalBlogFrontMatter extends FrontMatterBase {
   date: string;
   author: string;
   blurb: string;
   __resourcePath: string;
 }
 
-export type FrontMatter = FrontMatterBase | SynthBlogFrontMatter;
+export type FrontMatter = FrontMatterBase | PersonalBlogFrontMatter;
 
 interface MdxTemplateProps {
   children?: ReactNode;

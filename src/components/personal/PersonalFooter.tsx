@@ -1,7 +1,7 @@
 import React from 'react';
 import { Flex, Icon } from '@chakra-ui/core';
 
-const SynthFooter: React.FC = () => {
+const PersonalFooter: React.FC = () => {
   return (
     <Flex alignItems={'center'} justifyContent={'center'} fontSize={'3xl'} pt={8} pb={4}>
       <a href={'https://www.twitch.tv/iansynth'}>
@@ -17,4 +17,4 @@ const SynthFooter: React.FC = () => {
   );
 };
 
-export default SynthFooter;
+export default PersonalFooter;

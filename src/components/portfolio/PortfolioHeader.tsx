@@ -27,9 +27,9 @@ const PortfolioHeader: React.FC<BaseHeaderProps> = (props) => {
           Projects
         </Button>
       </Link>
-      <Link href={'/synth'} passHref>
+      <Link href={'/personal/blog'} passHref>
         <Button as={'a'} variant={'ghost'}>
-          Synth
+          Personal
         </Button>
       </Link>
     </BaseHeader>

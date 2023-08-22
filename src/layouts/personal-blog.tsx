@@ -1,18 +1,18 @@
 import React from 'react';
-import { MdxTemplate, SynthBlogFrontMatter } from '../types/MdxTemplates';
-import SynthPage from '../components/synth/SynthPage';
+import { MdxTemplate, PersonalBlogFrontMatter } from '../types/MdxTemplates';
+import PersonalPage from '../components/personal/PersonalPage';
 import { Heading, Flex, Text } from '@chakra-ui/core';
 import { PALETTE } from '../styles/theme';
-import { stringFromDate } from '../components/synth/SynthBlogPosts';
+import { stringFromDate } from '../components/personal/PersonalBlogPosts';
 
-const SynthBlogTemplate: MdxTemplate = ({ frontMatter, children }) => {
-  const fm = frontMatter as SynthBlogFrontMatter;
+const PersonalBlogTemplate: MdxTemplate = ({ frontMatter, children }) => {
+  const fm = frontMatter as PersonalBlogFrontMatter;
   const date = new Date(fm.date);
   const dateString = stringFromDate(date);
 
   return (
     <>
-      <SynthPage title={fm.title}>
+      <PersonalPage title={fm.title}>
         <Heading as={'h1'} fontSize={'5xl'} mt={5} mb={1}>
           {fm.title}
         </Heading>
@@ -25,9 +25,9 @@ const SynthBlogTemplate: MdxTemplate = ({ frontMatter, children }) => {
           </Text>
         </Flex>
         {children}
-      </SynthPage>
+      </PersonalPage>
     </>
   );
 };
 
-export default SynthBlogTemplate;
+export default PersonalBlogTemplate;
