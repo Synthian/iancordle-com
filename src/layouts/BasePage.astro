@@ -1,0 +1,31 @@
+---
+import Header from '@components/Header.astro';
+import "@styles/global.css";
+
+const { title } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel='icon' type='image/png' href='/ic-icon-16.png' sizes='16x16' />
+        <link rel='icon' type='image/png' href='/ic-icon-32.png' sizes='32x32' />
+		<title>IC | {title}</title>
+	</head>
+	<body class="bg-slate-950">
+		<div class="max-w-4xl">
+			<Header />
+			<slot />
+		</div>
+	</body>
+</html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+	}
+</style>
