@@ -1,5 +1,7 @@
 ---
 const { href, name } = Astro.props;
 ---
-<a href={href} class="text-white px-3 py-1.5 border-transparent rounded-sm
-    hover:bg-gray-400/30 focus:ring-4 focus:ring-gray-400 focus:outline-none">{name}</a>
+<a href={href} class="text-white font-bold antialiased
+    px-3.5 py-2 border-transparent rounded-sm
+    hover:bg-gray-400/30 focus:ring-4 focus:ring-gray-400 focus:outline-none
+    transition-all">{name}</a>

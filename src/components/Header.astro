@@ -5,38 +5,12 @@ import NavButton from "@components/elements/NavButton.astro";
 ---
 
 <nav class="sticky top-0 flex py-4 items-center bg-slate-950">
-
     <a href="/" class="rounded-sm focus:ring-4 focus:ring-gray-400 focus:outline-none">
         <Image src={icLogo} alt="IC" width="60"/>
     </a>
     <div class="flex-1"/>
+    <NavButton href="/" name="Home" />
     <NavButton href="/experience" name="Experience" />
     <NavButton href="/projects" name="Projects" />
-
-    <!--<Link href={'/'} passHref>-->
-    <!--    <a>-->
-    <!--        <Image src={'/img/ic-icon-transparent-256.png'} alt={'IC'} size={'60px'} />-->
-    <!--    </a>-->
-    <!--</Link>-->
-    <!--<Box flex={1} />-->
-    <!--<Link href={'/'} passHref>-->
-    <!--    <Button as={'a'} variant={'ghost'}>-->
-    <!--        Home-->
-    <!--    </Button>-->
-    <!--</Link>-->
-    <!--<Link href={'/experience'} passHref>-->
-    <!--    <Button as={'a'} variant={'ghost'}>-->
-    <!--        Experience-->
-    <!--    </Button>-->
-    <!--</Link>-->
-    <!--<Link href={'/projects'} passHref>-->
-    <!--    <Button as={'a'} variant={'ghost'}>-->
-    <!--        Projects-->
-    <!--    </Button>-->
-    <!--</Link>-->
-    <!--<Link href={'/personal/blog'} passHref>-->
-    <!--    <Button as={'a'} variant={'ghost'}>-->
-    <!--        Personal-->
-    <!--    </Button>-->
-    <!--</Link>-->
+    <NavButton href="/personal" name="Personal" />
 </nav>
