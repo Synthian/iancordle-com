@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import {defineConfig, fontProviders} from 'astro/config';
 import tailwindcss from "@tailwindcss/vite";
 
 import react from '@astrojs/react';
@@ -12,5 +12,10 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
   site: "https://www.iancordle.com",
-  integrations: [react(), mdx()]
+  integrations: [react(), mdx()],
+  fonts: [{
+    provider: fontProviders.fontsource(),
+    name: "Poppins",
+    cssVariable: "--font-poppins",
+  }]
 });

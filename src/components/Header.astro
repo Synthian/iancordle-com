@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import icLogo from '@assets/ic-icon-transparent-256.png';
+import NavButton from "@components/elements/NavButton.astro";
 ---
 
 <nav class="sticky top-0 flex py-4 items-center bg-slate-950">
@@ -9,8 +10,8 @@ import icLogo from '@assets/ic-icon-transparent-256.png';
         <Image src={icLogo} alt="IC" width="60"/>
     </a>
     <div class="flex-1"/>
-    <a href="/portfolio" class="text-white px-3 py-1.5 border-transparent rounded-sm
-    hover:bg-gray-400/30 focus:ring-4 focus:ring-gray-400 focus:outline-none">Portfolio</a>
+    <NavButton href="/experience" name="Experience" />
+    <NavButton href="/projects" name="Projects" />
 
     <!--<Link href={'/'} passHref>-->
     <!--    <a>-->
