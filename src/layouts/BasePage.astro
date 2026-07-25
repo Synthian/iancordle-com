@@ -15,19 +15,155 @@ const { title } = Astro.props;
         <link rel='icon' type='image/png' href='/ic-icon-32.png' sizes='32x32' />
 		<title>IC | {title}</title>
 	</head>
-	<body class="bg-slate-950">
+	<body class="relative bg-zinc-900 text-white">
+		<div class="pointer-events-none absolute inset-0 overflow-hidden">
+			<div class="blob blob-1"></div>
+			<div class="blob blob-2"></div>
+			<div class="blob blob-3"></div>
+			<div class="blob blob-4"></div>
+			<div class="blob blob-5"></div>
+		</div>
 		<div class="max-w-4xl m-auto">
 			<Header />
-			<slot />
+			<div id="fade-top" class="fade-top">
+				<slot />
+			</div>
 		</div>
 	</body>
 </html>
+
+<script>
+	function updateMask() {
+		const header = document.getElementById('site-header');
+		const fadeEl = document.getElementById('fade-top');
+		if (!header || !fadeEl) return;
+
+		const headerBottom = header.getBoundingClientRect().bottom;
+		const elementTop = fadeEl.getBoundingClientRect().top;
+
+		// Pixels of fade-top that are scrolled under the header
+		const hiddenPx = Math.max(0, headerBottom - elementTop);
+		const fadeSize = 16; // px for the fade transition
+
+		// Fade starts just before the header threshold so content only blurs as it reaches the header
+		const fadeStart = Math.max(0, hiddenPx - fadeSize);
+		const mask = `linear-gradient(to bottom, transparent 0px, transparent ${fadeStart}px, black ${hiddenPx}px)`;
+		fadeEl.style.maskImage = mask;
+		(fadeEl.style as any).webkitMaskImage = mask;
+	}
+
+	window.addEventListener('scroll', updateMask, { passive: true });
+	window.addEventListener('resize', updateMask);
+	document.addEventListener('DOMContentLoaded', updateMask);
+	updateMask();
+</script>
 
 <style>
 	html,
 	body {
 		margin: 0;
 		width: 100%;
-		height: 100%;
+		min-height: 100%;
+	}
+
+	.fade-top {
+		/* mask is applied dynamically via script */
+	}
+
+	.blob {
+		position: absolute;
+		border-radius: 9999px;
+		filter: blur(120px);
+		opacity: 0.35;
+		transform: translate3d(0, 0, 0);
+		mix-blend-mode: screen;
+		animation-duration: 18s;
+		animation-timing-function: ease-in-out;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
+	}
+
+	.blob-1 {
+		top: 10%;
+		left: 10%;
+		width: 24rem;
+		height: 24rem;
+		background: rgba(60, 200, 255, 0.45);
+		animation-name: drift-1;
+	}
+
+	.blob-2 {
+		top: 30%;
+		left: 80%;
+		width: 22rem;
+		height: 22rem;
+		background: rgba(180, 100, 255, 0.4);
+		animation-name: drift-2;
+		animation-duration: 22s;
+		animation-delay: -6s;
+	}
+
+	.blob-3 {
+		top: 60%;
+		left: 30%;
+		width: 28rem;
+		height: 28rem;
+		background: rgba(50, 210, 110, 0.26);
+		animation-name: drift-3;
+		animation-duration: 26s;
+		animation-delay: -10s;
+	}
+
+	.blob-4 {
+		top: 80%;
+		left: 50%;
+		width: 18rem;
+		height: 18rem;
+		background: rgba(255, 130, 200, 0.28);
+		animation-name: drift-4;
+		animation-duration: 20s;
+		animation-delay: -4s;
+	}
+
+	.blob-5 {
+		top: 18%;
+		left: 56%;
+		width: 16rem;
+		height: 16rem;
+		background: rgba(255, 215, 40, 0.18);
+		animation-name: drift-5;
+		animation-duration: 24s;
+		animation-delay: -14s;
+	}
+
+	@keyframes drift-1 {
+		0% { transform: translate3d(0, 0, 0) scale(1); }
+		50% { transform: translate3d(8rem, 6rem, 0) scale(1.15); }
+		100% { transform: translate3d(2rem, -4rem, 0) scale(0.95); }
+	}
+
+	@keyframes drift-2 {
+		0% { transform: translate3d(0, 0, 0) scale(1); }
+		50% { transform: translate3d(-7rem, 10rem, 0) scale(1.08); }
+		100% { transform: translate3d(-2rem, -3rem, 0) scale(0.92); }
+	}
+
+	@keyframes drift-3 {
+		0% { transform: translate3d(0, 0, 0) scale(1); }
+		50% { transform: translate3d(-10rem, -6rem, 0) scale(1.12); }
+		100% { transform: translate3d(4rem, -1rem, 0) scale(0.98); }
+	}
+
+	@keyframes drift-4 {
+		0% { transform: translate3d(0, 0, 0) scale(1); }
+		50% { transform: translate3d(10rem, -8rem, 0) scale(1.2); }
+		100% { transform: translate3d(6rem, 5rem, 0) scale(0.9); }
+	}
+
+	@keyframes drift-5 {
+		0% { transform: translate3d(0, 0, 0) scale(1); }
+		50% { transform: translate3d(-5rem, 9rem, 0) scale(1.1); }
+		100% { transform: translate3d(-8rem, -2rem, 0) scale(1.02); }
 	}
 </style>
+
