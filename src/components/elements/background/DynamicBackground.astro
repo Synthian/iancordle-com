@@ -1,0 +1,23 @@
+---
+---
+<div class="fixed -z-1 left-0 top-0 w-screen h-screen bg-zinc-900">
+    <div class="blob top-1/12 -left-1/12 bg-cyan-900" />
+    <div class="blob top-10/12 left-2/12 bg-indigo-950" />
+    <div class="blob top-2/12 left-10/12 bg-violet-900" />
+    <div class="blob top-5/12 left-9/12 bg-rose-950" />
+    <div class="blob top-11/12 left-8/12 bg-yellow-900" />
+</div>
+
+<style>
+    .blob {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(120px);
+        opacity: 0.35;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        width: 20vmax;
+        height: 20vmax;
+    }
+</style>

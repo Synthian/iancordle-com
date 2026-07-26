@@ -2,9 +2,10 @@
 import { Image } from 'astro:assets';
 import icLogo from '@assets/ic-icon-transparent-256.png';
 import NavButton from "@components/elements/NavButton.astro";
+import DynamicBackground from "@components/elements/background/DynamicBackground.astro";
 ---
-
-<nav class="sticky top-0 flex py-4 items-center bg-slate-950">
+<nav class="sticky top-0 flex pt-4 pb-5 items-center [clip-path:inset(0)] mask-(--nav-mask)">
+    <DynamicBackground />
     <a href="/" class="rounded-sm focus:ring-4 focus:ring-gray-400 focus:outline-none">
         <Image src={icLogo} alt="IC" width="60"/>
     </a>
