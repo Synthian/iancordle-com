@@ -1,0 +1,7 @@
+---
+import { Icon } from 'astro-icon/components';
+const { href, icon } = Astro.props;
+---
+<a class="border-transparent rounded-sm focus:ring-4 focus:ring-gray-400 focus:outline-none" href={href} >
+    <Icon name={icon} />
+</a>

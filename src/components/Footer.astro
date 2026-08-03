@@ -1,11 +1,7 @@
 ---
-import { Icon } from 'astro-icon/components';
+import IconButton from '@components/elements/IconButton.astro'
 ---
 <div class="flex items-center justify-center gap-4 pt-8 pb-6 text-3xl bg-linear-to-b from-transparent to-black/70">
-    <a href="https://www.github.com/synthian" >
-        <Icon name="simple-icons:github" />
-    </a>
-    <a href="https://www.linkedin.com/in/ian-cordle-5ab1361a2/" >
-        <Icon name="simple-icons:linkedin" />
-    </a>
+    <IconButton href="https://www.github.com/synthian" icon="simple-icons:github" />
+    <IconButton href="https://www.linkedin.com/in/ian-cordle-5ab1361a2/" icon="simple-icons:linkedin" />
 </div>
