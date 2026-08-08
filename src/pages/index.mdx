@@ -4,6 +4,7 @@ title: Ian Cordle
 ---
 import Age from '../components/content/Age.tsx';
 import Timeline from '../components/content/Timeline.astro';
+import LinkTag from '../components/elements/LinkTag.astro';
 
 ## About Me
 
@@ -19,7 +20,14 @@ I work as a development lead: I solve the team's more complicated problems while
 My job is to understand both the business needs and the technical details to guide the team towards a workable
 solution.
 
-Check out my [Experience] for more details about my professional work, or take a look at some of my personal [Projects].
-Or take a look at my [Personal] highlights from my hobbies.
+Check out my
+<LinkTag href="./experience" icon="mdi:briefcase" gradientClasses="from-sky-900 to-violet-900">Experience</LinkTag>
+for more details about my professional work, or take a look at some of my personal
+<LinkTag href="./projects" icon="mdi:clipboard-text-outline" gradientClasses="from-emerald-900 to-cyan-950">Projects</LinkTag>
+Or take a look at my
+<LinkTag href="./personal" icon="mdi:fountain-pen-tip" gradientClasses="from-yellow-900 to-amber-950">Personal</LinkTag>
+highlights from my hobbies.
+
+### Milestones and Events
 
 <Timeline />
