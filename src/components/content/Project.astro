@@ -1,0 +1,13 @@
+---
+import { Image } from "astro:assets";
+const { title, subtitle, img, imgAlt } = Astro.props;
+---
+<div class="py-5 pl-6 pr-5 overflow-auto bg-white/6 border border-white/8 rounded-2xl shadow">
+    <Image class="mx-auto mt-0! mb-5! rounded-2xl drop-shadow-md w-80
+                      md:mb-0! md:ml-5 md:w-1/2 md:float-right" src={img} alt={imgAlt} />
+    <h3 class="mt-0!">{title}</h3>
+    <h6 class="empty:hidden">{subtitle}</h6>
+    <p class="mb-0!">
+        <slot />
+    </p>
+</div>
