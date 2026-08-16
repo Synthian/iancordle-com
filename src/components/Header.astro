@@ -1,0 +1,19 @@
+---
+import { Image } from 'astro:assets';
+import icLogo from '@assets/ic-icon-transparent-256.png';
+import NavButton from "@components/elements/NavButton.astro";
+import DynamicBackground from "@components/elements/DynamicBackground.astro";
+---
+<nav class="sticky z-1 top-0 flex flex-col md:flex-row pt-4 pb-6 items-center mask-(--nav-mask)">
+    <DynamicBackground />
+    <a href="/" class="rounded-sm focus:ring-4 focus:ring-gray-400 focus:outline-none">
+        <Image src={icLogo} alt="IC" width="60"/>
+    </a>
+    <div class="hidden md:block md:flex-1"/>
+    <div class="flex items-center">
+        <NavButton href="/" name="Home" />
+        <NavButton href="/experience" name="Experience" />
+        <NavButton href="/projects" name="Projects" />
+        <NavButton href="/personal" name="Personal" />
+    </div>
+</nav>

@@ -1,0 +1,15 @@
+---
+const { year, colorClass } = Astro.props;
+---
+<div class="group relative flex flex-col ml-4 pl-7
+            md:w-1/2
+            md:odd:items-end md:odd:pr-7 md:odd:text-right md:odd:ml-0
+            md:even:self-end">
+    <div class=`absolute -translate-x-2 top-1.5 md:top-2 w-4 h-4
+                rounded-full border-white border-2 ${colorClass}
+                left-0
+                drop-shadow-black drop-shadow-sm
+                md:group-odd:left-full`/>
+    <div class="font-bold">{year}</div>
+    <div><slot/></div>
+</div>

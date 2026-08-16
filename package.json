@@ -1,56 +1,29 @@
 {
-  "name": "iancordle.com",
-  "author": "Synthian",
-  "license": "MIT",
-  "version": "1.0.0",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Synthian/iancordle-com"
+  "name": "iancordle-com",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
   },
   "scripts": {
-    "dev": "cross-env NODE_OPTIONS=--openssl-legacy-provider next dev",
-    "build": "rimraf out && cross-env NODE_OPTIONS=--openssl-legacy-provider next build && cross-env NODE_OPTIONS=--openssl-legacy-provider next export",
-    "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider next start",
-    "lint": "eslint . --ext ts --ext tsx --ext js",
-    "deploy": "gh-pages -d out -t true"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "@babel/core": "^7.11.6",
-    "@chakra-ui/core": "^0.8.0",
-    "@emotion/core": "^10.0.28",
-    "@emotion/styled": "^10.0.27",
-    "@mdi/js": "^5.3.45",
-    "@mdx-js/loader": "^1.6.5",
-    "@mdx-js/react": "^1.6.5",
-    "babel-plugin-import-glob-array": "^0.2.0",
-    "downloadjs": "^1.4.7",
-    "emotion-theming": "^10.0.27",
-    "next": "^9.5.3",
-    "next-mdx-enhanced": "^4.0.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-script-tag": "^1.1.2",
-    "xml2js": "^0.4.23"
-  },
-  "devDependencies": {
-    "@testing-library/react": "^10.0.1",
-    "@types/downloadjs": "^1.4.2",
-    "@types/node": "^13.9.5",
-    "@types/react": "^16.9.27",
-    "@types/testing-library__react": "^10.0.0",
-    "@types/xml2js": "^0.4.5",
-    "@typescript-eslint/eslint-plugin": "^2.25.0",
-    "@typescript-eslint/parser": "^2.25.0",
-    "cross-env": "^7.0.3",
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.10.1",
-    "eslint-plugin-mdx": "^1.7.0",
-    "eslint-plugin-prettier": "^3.1.2",
-    "eslint-plugin-react": "^7.19.0",
-    "eslint-plugin-react-hooks": "^2.4.0",
-    "gh-pages": "^3.0.0",
-    "prettier": "^2.0.2",
-    "rimraf": "^3.0.2",
-    "typescript": "^3.8.3"
+    "@astrojs/mdx": "^7.0.3",
+    "@astrojs/react": "^6.0.1",
+    "@iconify-json/mdi": "^1.2.3",
+    "@iconify-json/simple-icons": "^1.2.92",
+    "@tailwindcss/typography": "^0.5.20",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "astro": "^7.1.1",
+    "astro-icon": "^1.1.5",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "tailwindcss": "^4.3.3"
   }
 }

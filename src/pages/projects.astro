@@ -1,0 +1,37 @@
+---
+import BasePage from "@layouts/BasePage.astro";
+import websiteImage from '@assets/project-website.png';
+import oldWebsiteImage from '@assets/project-website-old.png';
+import bastionImage from '@assets/project-bastion-autosplitter.png';
+import bastionBotImage from '@assets/project-bastion-bot.png';
+import cadaverImage from '@assets/project-cadaver.jpg';
+import Project from '@components/content/Project.astro';
+---
+<BasePage title="Projects">
+    <h1>Projects</h1>
+    <div class="flex flex-col mt-8 gap-4">
+        <Project title="Portfolio Website 2026" subtitle="Astro, Tailwind" img={websiteImage} imgAlt="Porfolio Website Homepage">
+            The 2026 version of my portfolio has been updated to take advantage of modern libraries (i.e. Astro) as well as significantly improving design.
+            This version is responsive for smaller devices and has a fully custom style implemented with Tailwind.
+            AI was used sparingly in development.
+        </Project>
+        <Project title="Bastion Auto Splitter" subtitle="C#" img={bastionImage} imgAlt="Bastion Gameplay with Autosplitter">
+            Video game speedrunning often includes various supporting tools. I built this LiveSplit plugin for Bastion
+            players to automatically time when they have completed each level.
+        </Project>
+        <Project title="Cadaver: The Rotten Expansion" subtitle="Lua" img={cadaverImage} imgAlt="Steam Workshop banner for Cadaver">
+            Cadaver is a mod for The Binding of Isaac that I released on the Steam Workshop in 2021 and maintained for 2 years.
+            I worked with a team of pixel artists and created an array of content that was well received by the community. It has 6,000 current
+            subscriptions and 2,500 favorites on the Steam Workshop as of 2026.
+        </Project>
+        <Project title="Portfolio Website 2020" subtitle="Next.js, React, Chakra" img={oldWebsiteImage} imgAlt="Old Porfolio Website Experience">
+            The original version of this website was a React application built with Next.js.
+            Content was written in Markdown files with MDX and I used Chakra for UI components.
+        </Project>
+        <Project title="BastionBot" subtitle="Java, Spring" img={bastionBotImage} imgAlt="BastionBot posting runs in Discord">
+            BastionBot is a Discord bot that automatically tells the Bastion Speedrun Community when players have gone live on
+            Twitch and when new speedruns have been verified on Speedrun.com. It is written with Java and Spring to periodically
+            poll Twitch and Speedrun.com APIs.
+        </Project>
+    </div>
+</BasePage>

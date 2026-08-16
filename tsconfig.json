@@ -1,20 +1,21 @@
 {
+  "extends": "astro/tsconfigs/strict",
+  "include": [
+    ".astro/types.d.ts",
+    "**/*"
+  ],
+  "exclude": [
+    "dist"
+  ],
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "allowSyntheticDefaultImports": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve"
-  },
-  "exclude": ["node_modules", ".next", "out"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js"]
+    "baseUrl": "src",
+    "paths": {
+      "@components/*": ["./components/*"],
+      "@layouts/*": ["./layouts/*"],
+      "@assets/*": ["./assets/*"],
+      "@styles/*": ["./styles/*"]
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
+  }
 }

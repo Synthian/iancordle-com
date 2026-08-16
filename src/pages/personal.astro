@@ -1,0 +1,29 @@
+---
+import BasePage from "@layouts/BasePage.astro";
+import Project from '@components/content/Project.astro';
+import xwordImage from '@assets/personal-xword.png';
+import musicImage from '@assets/personal-music.jpg';
+import bakingImage from '@assets/personal-baking.jpg';
+---
+<BasePage title="Personal">
+    <h1>Personal</h1>
+    <div class="flex flex-col mt-8 gap-4">
+        <Project title="Music Production" img={musicImage} imgAlt="Album cover for Becoming a Hero">
+            Music has always been a big hobby for me. From band and chorus in high school to my recurring music production
+            attempts today. I am still learning, but I have released a few songs that I'm proud of - take a listen:
+            <br/><br/>
+            <iframe class="mx-auto" height="300" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%3Atracks%3A2296121573%3Fsecret_token%3Ds-oDkWVBP5iaN&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+        </Project>
+        <Project title="Baking" img={bakingImage} imgAlt="">
+            2025 was the year of cooking and baking for me. I am obsessed with desserts and I took up the challenge of baking a new recipe every week over the entire year. It was quite fun (though not so healthy...)
+        </Project>
+        <Project title="Crosswords" img={xwordImage} imgAlt="A crossword grid">
+            I was very dedicated to the New York Times Crossword for a time, and it inspired me to author some of
+            my own puzzles. Give them a try on Crosshare:
+            <br/><br/>
+            <a href="https://crosshare.org/crosswords/lEvBAsVAiYTH0eNZtkHP/august-22-2023">August 22, 2023</a>
+            <br/>
+            <a href="https://crosshare.org/crosswords/EP1QMrAJTgmdw9V5d5aS/july-7-2023">July 7, 2023</a>
+        </Project>
+    </div>
+</BasePage>

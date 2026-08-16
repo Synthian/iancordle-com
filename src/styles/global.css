@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@property --font-poppins {
+    syntax: "*";
+    inherits: true;
+}
+
+@theme {
+    --font-sans: var(--font-poppins), sans-serif;
+    --nav-mask: linear-gradient(black calc(100% - 1.25rem), transparent 100%);
+    --timeline-mask: linear-gradient(to bottom, transparent 0%, black 1.5rem, black calc(100% - 1.5rem), transparent 100%)
+}
+
