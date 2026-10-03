@@ -5,11 +5,17 @@ import oldWebsiteImage from '@assets/project-website-old.png';
 import bastionImage from '@assets/project-bastion-autosplitter.png';
 import bastionBotImage from '@assets/project-bastion-bot.png';
 import cadaverImage from '@assets/project-cadaver.jpg';
+import foleyImage from '@assets/project-foleymoley.jpg';
 import Project from '@components/content/Project.astro';
 ---
 <BasePage title="Projects">
     <h1>Projects</h1>
     <div class="flex flex-col mt-8 gap-4">
+        <Project title="Foley Moley" subtitle="React, Tailwind, Postgres, Node.js" img={foleyImage} imgAlt="Foley Moley Logo">
+            Foley Moley is a daily sound effect video game quiz. Developed as an experiment in rapid development, this app came together from
+            ideation to full production in 2 weeks. The app has a robust light/dark mode that plays nicely on a wide array of devices, as well
+            as a fully custom-designed Windows 9X inspired user interface. Play it <a href="https://www.foleymoley.app">here!</a>
+        </Project>
         <Project title="Portfolio Website 2026" subtitle="Astro, Tailwind" img={websiteImage} imgAlt="Porfolio Website Homepage">
             The 2026 version of my portfolio has been updated to take advantage of modern libraries (i.e. Astro) as well as significantly improving design.
             This version is responsive for smaller devices and has a fully custom style implemented with Tailwind.
